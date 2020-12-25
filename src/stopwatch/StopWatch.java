@@ -12,6 +12,7 @@ public class StopWatch {
     Instant stop = null;
 
     int l = 0;
+    String time = "00:00:00";
 
     StopWatch() {
         stopwatchMap.put("start", true);
@@ -41,7 +42,7 @@ public class StopWatch {
             l += (int) Duration.between(start, stop).toSeconds();
         }
 
-        String time = formatSeconds(l);
+        time = formatSeconds(l);
         System.out.println(time);
     }
 
@@ -88,7 +89,7 @@ public class StopWatch {
         return formattedTime;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         StopWatch obj = new StopWatch();
         Scanner sc = new Scanner(System.in);
